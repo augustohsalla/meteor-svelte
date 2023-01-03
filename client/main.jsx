@@ -1,8 +1,8 @@
-import React from 'react';
-import { Meteor } from 'meteor/meteor';
-import { render } from 'react-dom';
-import { App } from '/imports/ui/App';
+import { Meteor } from "meteor/meteor";
+import App from "../imports/ui/App.svelte";
 
 Meteor.startup(() => {
-  render(<App/>, document.getElementById('react-target'));
+  new App({
+    target: document.getElementById("app"),
+  });
 });
